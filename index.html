@@ -21,12 +21,19 @@
   </header>
 
   <section class="panel">
+    <div class="steps">
+      <span id="steps" class="steps-value">0</span>
+      <span class="steps-label">steps</span>
+      <span id="motionStatus" class="motion-status">Motion off</span>
+    </div>
+
     <div class="readout">
       <div><span class="label">Latitude</span><span id="lat" class="value">—</span></div>
       <div><span class="label">Longitude</span><span id="lng" class="value">—</span></div>
       <div><span class="label">Accuracy</span><span id="acc" class="value">—</span></div>
     </div>
     <p id="message" class="message" role="status" aria-live="polite"></p>
+    <p id="motionMessage" class="message" role="status" aria-live="polite"></p>
     <div class="buttons">
       <button id="startBtn" class="btn primary" type="button">Start</button>
       <button id="recenterBtn" class="btn" type="button" disabled>Recenter</button>

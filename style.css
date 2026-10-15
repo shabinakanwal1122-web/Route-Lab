@@ -69,6 +69,46 @@ html, body {
   -webkit-backdrop-filter: blur(8px);
 }
 
+/* Step counter */
+.steps {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+}
+.steps-value {
+  font-size: 56px;
+  line-height: 1;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -1px;
+}
+.steps-value.bump { animation: bump 0.18s ease-out; }
+@keyframes bump {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+.steps-label {
+  font-size: 15px;
+  color: var(--muted);
+  font-weight: 600;
+}
+.motion-status {
+  margin-left: auto;
+  align-self: center;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #334155;
+  color: var(--muted);
+}
+.motion-status.on { background: rgba(34, 197, 94, 0.2); color: var(--accent); }
+.motion-status.off-err { background: rgba(239, 68, 68, 0.2); color: #fca5a5; }
+
 .readout {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
